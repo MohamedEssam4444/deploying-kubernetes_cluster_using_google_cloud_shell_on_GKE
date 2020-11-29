@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod #kind of deployment
+metadata:
+  name: new-nginx #info about deployment
+  labels:
+    name: new-nginx 
+spec: #specifications of the pod
+  containers:
+  - name: new-nginx 
+    image: nginx
+    ports:#port on which image will be running on in the pod
+    - containerPort: 80
