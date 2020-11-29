@@ -27,7 +27,5 @@ kubectl describe pod $my_nginx_pod
 kubectl cp ~/test.html $my_nginx_pod:/usr/share/nginx/html/test.html
 #command to create a service to expose our nginx Pod externally,This command creates a LoadBalancer service, which allows the nginx Pod to accessed from internet addresses outside of the cluster.
 kubectl expose pod $my_nginx_pod --port 80 --type LoadBalancer
-#external IP address of service obtained from the output of the previous step.
-curl http://10.12.13.65/test.html
 #to deploy mainifest file (yamlfile) which is better to use:
 kubectl apply -f ./new-nginx-pod.yaml
